@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <p>
+    <div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <P>
+        <center> 
+           <font size=5 face="arial">
+           <b>
+            <h1>
+            Unidad 4
+           </h1>
+           </font>
+       </center>
+</div>
+</p>
+<title>Unidad 4</title>
+</head>
+
+<style>
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 200px 200px;
+        opacity: 0.06;
+        z-index: -2;
+    }
+    button {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 90px;
+    border: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    }
+    .social-icons {
+    text-align: center;
+    margin-top: 50px;
+    }
+    .social-icons a {
+    display: inline-block;
+    margin: 10px;
+    }
+    .menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    }
+
+</style>
+
+<body>
+    <h2><center>Menú:</center></h2>
+       <table width="100%" height="100%"  border="0" >
+        <tr>
+            <td><a href="unidad1.html" target="_self"><center><button><font size=3 face="arial">Unidad 1</font></button></center></a></td>
+            <td><a href="unidad2.html" target="_self"><center><button><font size=3 face="arial">Unidad 2</font></button></center></a></td>    
+            <td><a href="unidad3.html" target="_self"><center><button><font size=3 face="arial">Unidad 3</font></button></center></a></td>    
+            <td><a href="practicas.html" target="_self"><center><button><font size=3 face="arial">Práticas</font></button></center></a></td>
+        </tr>
+    </table>
+    <br>
+<center>
+<br><h4> 4.1 Aspectos básicos de la computación paralela</h4>
+<p style="text-align: justify;">
+    La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente (en paralelo).
+</p><h4>Ventajas</h4>
+        <ul style="text-align: justify;">
+        <li ::marker>Resuelve problemas que no se podrían realizar en una sola CPU y/o en un tiempo razonable.</li><br><br>
+        <li ::marker>Permite ejecutar código de manera más rápida (aceleración).</li><br><br>
+        <li ::marker>Permite ejecutar en general más problemas.</li><br><br>
+        <li ::marker>Permite la ejecución de varias instrucciones en simultáneo.</li><br><br>
+        <li ::marker>Permite dividir una tarea en partes independientes.</li><br><br>
+        <li ::marker>Ofrece mejor balance entre rendimiento y costo que la computación secuencial.</li><br>
+    </ul><h4>Desventajas</h4>
+    <ul style="text-align: justify;">
+        <li ::marker>Mayor consumo de energía.</li><br><br>
+        <li ::marker>Mayor dificultad a la hora de escribir programas.</li><br><br>
+        <li ::marker>Número de componentes usados es directamente proporcional a los fallos potenciales.</li><br><br>
+        <li ::marker>Retardos ocasionados por comunicación ente tareas.</li><br><br>
+        <li ::marker>Altos costos por producción y mantenimiento.</li><br><br>
+        <li ::marker>Si los procesos que están en condición de carrera no son correctamente sincronizados, puede producirse una corrupción de datos.</li><br>
+    </ul><img src="36.png" height="250" width="350" align="center">
+    <h4>4.2 - 4.2.1 Tipos y clasificación de la computación paralela</h4>
+    <ul style="text-align: justify;">
+        <li ::marker>SISD (Single Instruction, Single Data): Instrucción Única, Datos Únicos. Un único procesador se encarga de gestionar simultáneamente un algoritmo como una única fuente de datos. SISD representa una organización informática que tiene una unidad de control, una de procesamiento y una de memoria similar a la computadora serie. Ejecuta las instrucciones secuencialmente y puede o no ser capaz de realizar procesamiento en paralelo, dependiendo de su configuración.</li><br><br>
+        <li ::marker>MISD (Multiple Instruction, Single Data): Los procesadores múltiples son estándar en las computadoras que utilizan Instrucción Múltiple, Datos Únicos (MISD). Al utilizar varios algoritmos, todos los procesadores comparten los mismos datos de entrada. Pueden realizar simultáneamente muchas operaciones en el mismo lote de datos. La cantidad de operaciones se ve afectada por la cantidad de procesadores disponibles. La salida de un procesador se convierte en la entrada del siguiente.</li><br><br>
+        <li ::marker>SIMD (Single Instruction, Multiple Data): Las computadoras que utilizan la arquitectura SIMD (Instrucción Única, Datos Múltiples) tienen múltiples procesadores que ejecutan instrucciones idénticas. Sin embargo, cada procesador proporciona las instrucciones con su colección única de datos. Aplican el mismo algoritmo a varios conjuntos de datos. La arquitectura SIMD cuenta con varios componentes de procesamiento, los cuales están bajo la supervisión de una única unidad de control.</li><br><br>
+        <li ::marker>MIMD (Multiple Instruction, Multiple Data): Instrucción Múltiple, Datos Múltiples. Se caracterizan por la presencia de múltiples procesadores y cada uno de ellos es capaz de aceptar de forma independiente su flujo de instrucciones. Este tipo de computadoras tienen muchos procesadores y, además, cada CPU extrae datos de un flujo de datos diferente. Una computadora MIMD es capaz de ejecutar muchas tareas simultáneamente. Desarrollar los sofisticados algoritmos que impulsan estas máquinas es más complejo.</li><br><br>
+        <li ::marker>SPMD (Single Program, Multiple Data): Programa Único, Datos Múltiples, son un subconjunto de MIMD. Cada uno de sus procesadores es responsable de ejecutar las mismas instrucciones. Es una programación de paso de mensajes utilizada en sistemas informáticos de memoria distribuida. un grupo de computadoras separadas, denominadas colectivamente nodos, forman una computadora con memoria distribuida. Cada nodo inicia su aplicación y utiliza rutinas de envío/recepción para enviar y recibir mensajes cuando interactúa con otros nodos.</li><br>
+    </ul><h4>4.2.2 Arquitectura de computadoras secuenciales</h4>
+    <ul style="text-align: justify;">
+        <li>La arquitectura de computadoras secuenciales se basa en el modelo introducido por John Von Neumann. En este modelo, encontramos los siguientes componentes:</li><br><br>
+        <li ::marker>Unidad Central de Procesamiento (CPU): Es el corazón de la computadora y ejecuta las instrucciones.</li><br><br>
+        <li ::marker>Memoria Principal: Almacena información, como programas y datos.</li><br><br>
+        <li ::marker>Bus: Permite el flujo de datos entre la CPU y la memoria.</li><br><br>
+        <li ::marker>Mecanismo de sincronización: Coordina las operaciones entre los componentes.</li><br>
+    </ul><h4>Ventajas</h4>
+    <ul style="text-align: justify;">
+        <li ::marker>Simplicidad: Los sistemas secuenciales son más fáciles de diseñar y entender. Siguen un flujo lógico paso a paso, lo que facilita su implementación.</li><br><br>
+        <li ::marker>Predicción de rendimiento: Dado que las instrucciones se ejecutan en orden, es más sencillo predecir el rendimiento y calcular el tiempo de ejecución.</li><br><br>
+        <li ::marker>Menos problemas de control: La ejecución secuencial reduce la complejidad de los problemas de control, como la gestión de conflictos en el acceso a recursos compartidos.</li><br><br>
+        <li ::marker>Facilidad de depuración: En comparación con arquitecturas más complejas, las computadoras secuenciales son más fáciles de depurar y rastrear errores.</li><br>
+    </ul><h4>4.2.3 Organización de direcciones de memoria</h4>
+    <p style="text-align: justify;">
+        Una dirección de memoria es un identificador para una localización de memoria con la cual un programa informático o un dispositivo de hardware pueden almacenar un dato para su posterior reutilización. Una forma común de describir la memoria principal de una computadora es como una colección de celdas que almacenan datos e instrucciones.
+        <br><br>
+        El direccionamiento de la memoria puede considerarse desde dos puntos de vista:    
+    </p><ul style="text-align: justify;">
+        <li ::marker>Físico: Se refiere a los medios electrónicos utilizados en el ordenador para acceder a las diversas posiciones de memoria.</li><br><br>
+        <li ::marker>Lógico: Se refiere a la forma en que se expresan y guardan las direcciones.</li><br>
+        </ul><h4>Notación</h4>
+    <p style="text-align: justify;">
+        El sistema de numeración utilizado por los informáticos para representar las direcciones de memoria en el texto escrito no suele ser la decimal, sino el hexadecimal.
+        <br><br>
+        Un bus de direcciones de 8 bits puede acceder a 256 posiciones (en hexadecimal es el rango 00-FFh). En caso de direcciones de 16 bits, se puede acceder 65.536 posiciones (es el rango 0000-FFFFh).
+    </p><img src="37.png" height="200" width="300" align="center">
+    <h4>4.3 Sistemas de memoria (Compartida)</h4>
+    <p style="text-align: justify;">
+        La memoria compartida es aquel tipo de memorias que puede ser accedida por múltiples programas, ya sea para comunicarse entre ellos o para evitar copias redundantes. La memoria compartida es un modo eficaz de pasar datos entre aplicaciones.
+        <br><br>
+        Dependiendo del contexto, los programas pueden ejecutarse en un mismo procesador o en procesadores separados.
+    </p><ul style="text-align: justify;">
+        <li ::marker>Multiprocesadores: Se denomina multiprocesador a un computador que te permite abrir programas en más de una CPU por lo que puede ejecutar simultáneamente varios hilos pertenecientes a un mismo proceso o bien a procesos diferentes. Las computadoras multiprocesador presentan problemas de diseño. Estos problemas derivan del hecho de que dos programas pueden ejecutarse simultáneamente y, potencialmente, pueden interferirse entre sí. Existen 3 arquitecturas que resuelven estos problemas: Arquitectura UMA (Uniform Memory Access), Arquitectura NUMA (Non-Uniform Memory Access) y Arquitectura COMA (Cache-only Memory Access).</li><br><br>
+        <li ::marker>Arquitectura UMA (Uniform Memory Access): Todos los procesadores comparten toda la memoria de forma simétrica.</li><br><br>
+        <li ::marker>Arquitectura NUMA (Non-Uniform Memory Access): Cada procesador tiene acceso y control exclusivo a una parte de la memoria. Por lo que el acceso a esta memoria no es simétrico entre todos los CPU.</li><br><br>
+        <li ::marker>Arquitectura COMA (Cache-only Memory Access): cada procesador tiene acceso y control exclusivo a una parte de la memoria caché.</li><br>
+    </ul><h4>4.3.1 Redes de interconexión dinámica (Indirecta)</h4>
+    <p style="text-align: justify;">
+        Son redes que pueden cambiar la topología de comunicación durante la ejecución de los programas o entre dos ejecuciones de programas.
+        <br><br>
+        Las redes dinámicas se han utilizado esencialmente en los multiprocesadores de memoria compartida: la red dinámica soporta, por consiguiente, la carga de unir los N procesadores a los bancos de la memoria central.
+    </p><img src="38.png" height="200" width="350" align="center">
+    <h4>4.3.1.1 Redes de medio compartida</h4>
+    <p style="text-align: justify;">
+        Un medio compartido se refiere a un tipo de red donde múltiples dispositivos comparten un único canal de comunicación para enviar datos. Varios dispositivos, como computadoras, servidores, impresoras, etc., están conectados a través de un medio compartido, como un cable Ethernet o una red inalámbrica.
+        <br><br>
+        Cuando la red se quiere conectar a varios dispositivos conlleva a interferencias o colisiones, por lo tanto se debe de establecer un mecanismo que regule esto, esto nos lleva a la conmutación.
+    </p><h4>4.3.1.2 Redes conmutadas.</h4>
+    <p style="text-align: justify;">
+        Son aquellas en la que la comunicación entre un host origen y un host destino se realiza mediante la transmisión de datos a través de una red de nodos intermedios.
+        <br><br>
+        Cada nodo almacena temporalmente la información antes de reenviarla
+        <br><br>
+        El proceso consta en 3 fases: establecimiento de la conexión, transferencia de la información y liberación de la conexión.
+    </p><h4>Características</h4>
+    <ul style="text-align: justify;">
+        <li ::marker>Se utilizan para comunicaciones a largas distancias.</li><br><br>
+        <li ::marker>Los nodos no se preocupan del contenido de los datos.</li><br><br>
+        <li ::marker>Los dispositivos finales son estaciones (Computadoras, teléfonos, etc.).</li><br>
+    </ul><img src="39.png" height="200" width="300" align="center">
+    <h4>4.4 Sisitemas de memoria construida</h4>
+    <p style="text-align: justify;">
+        Los sistemas de memoria construida son una forma de organización de la memoria en la computación paralela en la que cada procesador tiene su propia memoria local. Esto permite una mayor independencia entre los procesadores y reduce la necesidad de acceder a una memoria compartida.
+    </p><h4>4.5 Casos de estudio.</h4>
+    <p style="text-align: justify;">
+        En el campo de la computación paralela, existen numerosos casos de estudio que han demostrado la eficacia y los beneficios de los enfoques paralelos en diferentes dominios. Algunos ejemplos incluyen el uso de computación paralela en simulaciones científicas, análisis de grandes conjuntos de datos, renderizado de gráficos y modelado de sistemas complejos.
+    </p><img src="40.png" height="200" width="300" align="center">
+    <br><br><br>
+    <a href="index.html" target="_self">
+    <img src="regresar.png" height="50" width="50" class="menu-button">
+</a>
+</center>
+    <br>
+    <div class="social-icons">
+    <font face="arial">
+    <h3><i>Rodrigo Sosa Covarrubias</i></h3>
+    <h3><i>L21051515@saltillo.tecnm.mx</i></h3>
+    </font>
+    <a href="https://saltillo.tecnm.mx" target="_blank"><img src="logo.png" height="55" width="55"></a>
+    <a href="https://www.facebook.com" target="_blank"><img src="pp.png" height="55" width="55"></a>
+    <a href="https://whatsapp.com" target="_blank"><img src="p.png" height="55" width="55"></a>
+    <a href="https://www.instagram.com" target="_blank"><img src="p2.png" height="45" width="45"></a>
+    </div>
+</html>

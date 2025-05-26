@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <p>
+    <div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <P>
+        <center> 
+           <font size=5 face="arial">
+           <b>
+            <h1>
+            Unidad 1
+           </h1>
+           </font>
+       </center>
+</div>
+</p>
+<title>Unidad 1</title>
+</head>
+
+<style>
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 200px 200px;
+        opacity: 0.06;
+        z-index: -2;
+    }
+    button {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 90px;
+    border: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    }
+    .social-icons {
+    text-align: center;
+    margin-top: 50px;
+    }
+    .social-icons a {
+    display: inline-block;
+    margin: 10px;
+    }
+    .menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    }
+
+</style>
+
+<body>
+    <h2><center>Menú:</center></h2>
+       <table width="100%" height="100%"  border="0" >
+        <tr>
+            <td><a href="unidad2.html" target="_self"><center><button><font size=3 face="arial">Unidad 2</font></button></center></a></td>    
+            <td><a href="unidad3.html" target="_self"><center><button><font size=3 face="arial">Unidad 3</font></button></center></a></td>    
+            <td><a href="unidad4.html" target="_self"><center><button><font size=3 face="arial">Unidad 4</font></button></center></a></td>
+            <td><a href="practicas.html" target="_self"><center><button><font size=3 face="arial">Práticas</font></button></center></a></td>
+        </tr>
+    </table>
+    <br>
+<center>
+<br><br><h4>1.1.1 Arquitectura de componentes</h4>
+<p style="text-align: justify;">
+    La miniaturización y estandarización de los CPU han tenido un impacto significativo en la vida moderna, expandiendo su presencia más allá de las aplicaciones tradicionales en las máquinas de computación dedicadas. En la actualidad, los microprocesadores modernos se encuentran en una amplia gama de dispositivos, incluyendo:
+</p><ul style="text-align: justify;">
+    <li ::marker>Teléfonos móviles o celulares: Impulsan la ejecución de aplicaciones y la conectividad a redes.</li>
+    <li ::marker> Calculadoras: Ejecutan operaciones matemáticas complejas con rapidez y precisión.</li>
+    <li ::marker>Aviones: Gestionan sistemas críticos de navegación y control.</li>
+    <li ::marker>Juguetes: Ofrecen funciones interactivas y de entretenimiento avanzadas.</li>
+    <li ::marker>Automóviles: Controlan funciones desde el motor hasta los sistemas de entretenimiento</li>
+    <li ::marker>Televisores: Permiten funciones avanzadas como la visualización de contenido en línea.</li>
+</ul> <p style="text-align: justify;">
+    En resumen, los microprocesadores modernos son componentes clave en una amplia variedad de dispositivos y sistemas, contribuyendo a su funcionalidad, rendimiento y capacidad de procesamiento de datos.
+</p> <h4>Clásicas.</h4>
+    <p style="text-align: justify;">
+        Estas arquitecturas se desarrollaron en las primeras computadoras electromecánicas y de tubos de vacío. 
+        Hay dos arquitecturas distintas relacionadas con el uso y distribución de la memoria: 
+        Arquitectura de John Von Neumann y Arquitectura Harvard.
+    </p>
+    <h4>Arquitectura Von Neumann </h4>
+    <p style="text-align: justify;">
+        La unidad central de proceso (CPU) está conectada a una memoria principal única (casi siempre solo RAM) donde se guardan las instrucciones del programa y los datos. A dicha memoria se accede a través de un sistema de interconexión de buses único (control, direcciones y datos). En un sistema con arquitectura Von Neumann, el tamaño de la unidad de datos o instrucciones está fijado por el ancho del bus que comunica la memoria con la CPU. Tener un único bus hace que el microprocesador sea más lento en su respuesta, ya que no puede buscar en memoria una nueva instrucción mientras no finalicen las transferencias de datos de la instrucción anterior.
+    </p><p style="text-align: justify;">
+    Componentes principales de Von Neumann:
+    </p><ul style="text-align: justify;">
+        <li ::marker> Unidad de Memoria. </li>
+        <li ::marker> Unidad de Entrada/Salida.</li>
+        <li ::marker>Unidad de Control (incluida en la CPU).</li>
+        <li ::marker>Unidad Aritmética Lógica (incluida en la CPU).</li>
+        <li ::marker>Registros de Programas (incluidos en la CPU).</li>
+    </ul><p style="text-align: justify;">
+    Las instrucciones provenientes del sistema de entrada son almacenadas por la memoria y procesadas por la ALU bajo la dirección de la unidad de control. Los resultados obtenidos son enviados a la unidad de salida. En las computadoras de programa almacenado, el programa puede manipularse como si se tratara de datos. Este concepto da origen a los compiladores, sistemas operativos y es la base de la gran versatilidad de las computadoras modernas.
+    </p><p style="text-align: justify;">
+    Limitaciones del modelo Von Neumann: La longitud de las instrucciones por el bus de datos, que hace que el microprocesador tenga que realizar varios accesos a memoria para buscar instrucciones complejas.
+    </p><br><img src="1.png" height="200" width="300" align="center">
+    <h4>Arquitectura Harvard</h4>
+    <p style="text-align: justify;">
+    Esta arquitectura utiliza microcontroladores y tiene la unidad central de proceso (CPU) conectada a dos memorias (una con las instrucciones y otra con los datos) por medio de dos buses diferentes. Una de las memorias contiene solamente las instrucciones del programa (Memoria de Programa), y la otra solo almacena datos (Memoria de Datos). Ambos buses son totalmente independientes, lo que permite que la CPU pueda acceder de forma independiente y simultánea a la memoria de datos y a la de instrucciones.
+    <br><br>
+    El tamaño de las instrucciones no está relacionado con el de los datos, y por lo tanto puede ser optimizado para que cualquier instrucción ocupe una sola posición de memoria de programa, logrando así mayor velocidad y menor longitud de programa. La principal desventaja de esta arquitectura es que el bus de datos y direcciones único se convierte en un cuello de botella por el cual debe pasar toda la información que se lee de o se escribe a la memoria, obligando a que todos los accesos a esta sean secuenciales. Esto limita el grado de paralelismo (acciones que se pueden realizar al mismo tiempo) y, por lo tanto, el desempeño de la computadora.
+    </p><img src="2.png" height="200" width="350" align="center">
+    <h4>1.1.2 Arquitectura segmentada</h4>
+    <p style="text-align: justify;">
+        Las arquitecturas segmentadas o con segmentación del cauce buscan mejorar el desempeño realizando paralelamente varias etapas del ciclo de instrucción al mismo tiempo. El procesador se divide en varias unidades funcionales independientes y se dividen entre ellas el procesamiento de las instrucciones.
+    </p><img src="3.png" height="200" width="350" align="center">
+    <h4>1.1.3 Multiprocesamiento.</h4>
+    <p style="text-align: justify;">
+        Cuando se desea incrementar el desempeño más allá de lo que permite la técnica de segmentación del cauce (límite teórico de una instrucción por ciclo de reloj), se requiere utilizar más de un procesador para la ejecución del programa de aplicación. Las CPU de multiprocesamiento pueden clasificarse en las siguientes categorías:
+    </p><ul style="text-align: justify;">
+        <li ::marker> SISO – (Single Instruction, Single Operand): Computadoras independientes.</li>
+        <li ::marker> SIMO – (Single Instruction, Multiple Operand): Procesadores vectoriales.</li>
+        <li ::marker>MISO – (Multiple Instruction, Single Operand): No implementado.</li>
+        <li ::marker>MIMO – (Multiple Instruction, Multiple Operand): Sistemas SMP, Clusters.</li>
+    </ul><br><h4> 1.2 Análisis de los componentes<br><br> 1.2.1.1 CPU <br><br>Unidad Central de Procesamiento (CPU)</h4>
+    <p style="text-align: justify;">
+        La unidad central de procesamiento, UCP o CPU (por el acrónimo en inglés de central processing unit), o simplemente el procesador o microprocesador, es el componente del computador y otros dispositivos programables que interpreta las instrucciones contenidas en los programas y procesa los datos. Los CPU proporcionan la característica fundamental de la computadora digital (la programabilidad) y son uno de los componentes necesarios encontrados en las computadoras de cualquier tiempo, junto con el almacenamiento primario y los dispositivos de entrada/salida. Se conoce como microprocesador al CPU que es manufacturado con circuitos integrados. Desde mediados de los años 1970, los microprocesadores de un solo chip han reemplazado casi totalmente todos los tipos de CPU, y hoy en día, el término "CPU" se aplica usualmente a todos los microprocesadores.
+      <br><br>
+      La expresión "unidad central de proceso" es, en términos generales, una descripción de una cierta clase de máquinas de lógica que pueden ejecutar complejos programas de computadora. Esta amplia definición puede fácilmente ser aplicada a muchos de los primeros computadores que existieron mucho antes de que el término "CPU" estuviera en amplio uso. Sin embargo, el término en sí mismo y su acrónimo han estado en uso en la industria de la informática por lo menos desde el principio de los años 1960. La forma, el diseño y la implementación de los CPU ha cambiado drásticamente desde los primeros ejemplos, pero su operación fundamental ha permanecido bastante similar.  
+      <br><br>
+      Los primeros CPU fueron diseñados a la medida como parte de una computadora más grande, generalmente una computadora única en su especie. Sin embargo, este costoso método de diseñar los CPU a la medida para una aplicación particular ha desaparecido en gran parte y se ha sustituido por el desarrollo de clases de procesadores baratos y estandarizados adaptados para uno o muchos propósitos. Esta tendencia de estandarización comenzó generalmente en la era de los transistores discretos, computadoras centrales y microcomputadoras, y fue acelerada rápidamente con la popularización del circuito integrado (IC), que ha permitido que se diseñen y fabriquen CPU más complejos en espacios pequeños (en el orden de milímetros). Tanto la miniaturización como la estandarización de los CPU han aumentado la presencia de estos dispositivos digitales en la vida moderna mucho más allá de las aplicaciones limitadas de máquinas de computación dedicadas. Los microprocesadores modernos aparecen en todo, desde automóviles, televisores, neveras, calculadoras, aviones, hasta teléfonos móviles o celulares, juguetes, entre otros
+    </p><img src="4.jpg" height="200" width="350" align="center">
+    <h4> 1.2.1.2 Unidad Aritmetica Logica<br><br> Unidad Aritmetica Logica</h4>
+    <p style="text-align: justify;">
+        La unidad aritmético lógica, también conocida como ALU (siglas en inglés de arithmetic logic unit), es un circuito digital que calcula operaciones aritméticas (como suma, resta, multiplicación, etc.) y operaciones lógicas entre dos números.
+    <br><br>
+        Una ALU tiene dos tipos distintos de entradas: entradas de datos (A, B) y entrada de control (S).
+    </p><img src="5.png" height="200" width="200" align="center">
+    <h4> 1.2.1.3 Registros<br><br> ¿Qué son los registros?</h4>
+    <p style="text-align: justify;">
+        Un registro es una memoria que esta ubicada en el procesador y se encuentra en el nivel más alto en la jerarquía de memoria, por lo tanto tiene una alta velocidad pero con poca capacidad para almacenar datos que va desde los 4 bits hasta los 64 bits dependiendo del procesador que se utilice. Los datos que almacena son los que se usan frecuentemente.    
+        <br><br>
+       El número de registros del CPU es limitado, ya que las compuertas lógicas del circuito integrado se emplean para implementar las secuencias de control de estas instrucciones especiales.
+    </p><img src="6.png" height="200" width="200" align="center">
+    <h4> 1.2.1.4 Buses <br><br> ¿Qué son los buses?</h4>
+    <p style="text-align: justify;">
+        Son canales de comunicación que permiten la transferencia de datos entre diferentes componentes del sistema. Estos componentes pueden ser la CPU, la memoria, los dispositivos de almacenamiento, las tarjetas de expansión, etc.
+    </p><h4> Tipos de buses</h4>
+    <p style="text-align: justify;">
+        - Bus del sistema: Es el principal canal de comunicación en una computadora y conecta la CPU con la memoria RAM.
+        <br>
+        - Bus de datos: Facilita la transferencia de datos entre la unidad central de procesamiento (CPU), la memoria y otros dispositivos conectados al sistema.
+        <br>
+        - Bus del direcciones: Se utiliza para especificar la ubicación de la memoria o de los registros en la CPU a los que se desea acceder.
+        <br>
+        - Bus de control: Se encarga de transmitir señales de control que coordinan y regulan las operaciones dentro del sistema. Trabaja en conjunto con los buses de datos y de direcciones para garantizar que las operaciones se realicen de manera eficiente y en el orden adecuado.
+        <br>
+        - Bus de Entrada/Salida: Es una ruta de comunicación que conecta la CPU con los dispositivos externos, facilitando la entrada y salida de datos en una computadora.
+    </p><h4> 1.2.2 Memoria <br><br> 1.2.2.1 Conceptos básicos del manejo de memoria <br><br> ¿Qué es la memoria? </h4>
+    <p style="text-align: justify;">
+        Es un dispositivo que puede mantenerse en por lo menos dos estados estables por un cierto periodo de tiempo.
+    <br><br>
+        Cada uno de estos estados estables puede utilizarse para representar un bit.
+        <br><br>
+        A un dispositivo con la capacidad de almacenar por lo menos un bit se le conoce como celda básica de memoria.
+        <br><br>
+        Un dispositivo de memoria completo se forma con varias celdas básicas y los circuitos asociados para poder leer y escribir dichas celdas básicas, agrupadas como localidades de memoria que permitan almacenar un grupo de N bits.
+        <br> <br>
+        Cada uno de estos estados estables puede utilizarse para representar un bit.
+        <br><br>
+        En informática, la memoria es el dispositivo que retiene, memoriza o almacena datos informáticos durante algún periodo de tiempo. La memoria proporciona una de las principales funciones de la computación moderna: el almacenamiento de información y conocimiento.    
+    </p><img src="7.gif" height="200" width="200" align="center">
+    <h4> Gestion de memoria   </h4>
+    <p style="text-align: justify;">
+        El proceso de asignación de memoria a los programas que la solicitan.
+        <br><br>
+        La gestión de la memoria principal de una computadora es una tarea de suma importancia para el funcionamiento de la misma.
+    </p><h4> Sistemas de memoria virtual</h4>
+    <p style="text-align: justify;">
+        Los sistemas de memoria virtual separan las direcciones de memoria utilizadas por un proceso de las direcciones físicas reales, permitiendo la separación de procesos e incrementando la cantidad efectiva de memoria de acceso aleatorio utilizando la paginación. La calidad de la gestión de la memoria es crucial para las prestaciones del sistema.
+    </p><h4> Administracion de memoria</h4>
+    <p style="text-align: justify;">
+        La administración de memoria se refiere a los distintos métodos y operaciones que se encargan de obtener la máxima utilidad de la memoria, organizando los procesos y programas que se ejecutan de manera tal que se aproveche de la mejor manera posible el espacio disponible.
+    </p><h4> Tecnicas  </h4>
+    <p style="text-align: justify;">
+        Las técnicas que existen para la carga de programas en la memoria son:
+        <br><br>
+        Partición fija, que es la división de la memoria libre en varias partes (de igual o distinto tamaño).
+        <br><br>
+        Partición dinámica, que son las particiones de la memoria en tamaños que pueden ser variables, según la cantidad de memoria que necesita cada proceso.
+    </p><h4> 1.2.2.2 Memoria principal <br><br> Tipos de RAM</h4>
+    <p style="text-align: justify;">
+        Existen dos tipos:
+    <br>
+    - DDR (Double Data Rate): Son capaces de llevar a cabo dos operaciones en cada ciclo de reloj. Se activan dos veces en cada ciclo de la señal de reloj, bien por nivel o por flanco.
+    <br><br>
+    - SDR(Single Data Rate): Solo ejecutan una operacion de lectura o escritura.
+    </p><h4>¿Para que sirve?</h4>
+    <p style="text-align: justify;">
+        Es la encargada de hacer las tareas de forma más inmediata y almacenar las instrucciones de la CPU o los datos que las necesitan constantemente.
+        <br>
+        Los navegadores suelen ocupar mucha memoria RAM al igual que las aplicaciones que se queden abiertas.
+    </p><img src="8.jpeg" height="200" width="300" align="center">
+    <h4> 1.2.2.3 Memoria cache  <br><br> ¿Que es?</h4>
+    <p style="text-align: justify;">
+        Es la memoria de acceso rápido de una computadora, que guarda temporalmente las últimas informaciones procesadas.
+        Es un búfer especial de memoria que poseen las computadoras, que funciona de manera similar a la memoria principal, pero es de menor tamaño y de acceso más rápido.
+    </p><h4> Nivel uno  </h4>
+    <p style="text-align: justify;">
+        Se encuentra en el núcleo del procesador. Es utilizada para almacenar y acceder a datos e instrucciones importantes y de uso frecuente, agilizando los procesos al ser el nivel que ofrece un tiempo de respuesta menor.
+    </p><h4> Nivel dos </h4>
+    <p style="text-align: justify;">
+        Se encarga de almacenar datos de uso frecuente, es mayor que la caché L1, pero a costa de ser más lenta, aun así es más rápida que la memoria principal (RAM).
+
+        Puede contener una copia del nivel 1 además de información extra, o exclusiva y que su contenido sea totalmente diferente de la cache L1
+    </p><h4> Nivel tres </h4>
+    <p style="text-align: justify;">
+        Es más rápida que la memoria principal (RAM), pero más lenta que L2, ayuda a que el sistema guarde gran cantidad de información agilizando las tareas del procesador. En esta memoria se agiliza el acceso a datos e instrucciones que no fueron localizadas en L1 o L2. Al igual que la L2, puede ser inclusiva y contener una copia de L2 además de información extra
+    </p><img src="9.png" height="200" width="300" align="center">
+    <h4> 1.2.3 Manejo de entrada/salida  </h4>
+    <p style="text-align: justify;">
+        Una computadora no puede estar formado sólo por la CPU y la memoria.
+    <br>
+        Para darle alguna utilidad utilidad debe de comunicarse con el mundo exterior a través del subsistema de entrada/salida (I/O input/output).    
+    </p><h4> Funciones del sistema de E/S  </h4>
+    <p style="text-align: justify;">
+        1. DIRECCIONAMIENTO: selección del dispositivo correspondiente de entre los dispositivos disponibles en el sistema.
+    <br>
+        2. SINCRONIZACIÓN: ha de posibilitar que la CPU y la memoria se puedan comunicar con Los dispositivos de E/S.
+    <br>
+        3. TRANSFERENCIA: el sistema E/S debe de tener toda la circuitería y señales de comunicación apropiadas.
+    </p><img src="10.png" height="200" width="400" align="center">
+    <h4>1.2.3.1 Modulos de entrada/salida</h4>
+    <p style="text-align: justify;">
+        Los módulos son las interfaces que tiene la computadora con el exterior. Su obetivo es facilitar las operaciones de E/S entre los periféricos y la memoria o los registros del procesador.
+        <br>
+        Un módulo de E/S se conecta con el procesador a través de un bus. Los datos que se transfieren se almacenan temporalmente en un registro de datos.
+    </p><h4>Características</h4>
+    <p style="text-align: justify;">
+        Conectar con la CPU y memoria vía bus del sistema.
+        <br>
+        Conectar con con los periféricos mediante conexiones de datos particularizadas.
+        <br>
+        La arquitectura de un E/S se diseña de forma que permita una forma sistemática de controlar las interacciones con el mundo exterior y proprocione al sistema operativo la información que necesita para gestionar la actividad de E/S.
+        <br>
+        El módulo E/S es frecuentemente responsable de realizar una detección de errores, que pueden ser avisados por el periférico o producirse por fallos de transmisión.
+        <br>
+        Un módulo de E/S permite a la CPU controlar al periférico únicamente con operaciones de lectura/escritura.
+    </p><h4>Control de transferencia de datos</h4>
+    <p style="text-align: justify;">
+        1.La CPU pide al módulo E/S del periférico deseado.
+     <br>
+         2.El módulo E/S proporciona el estado.
+    <br>
+        3.Si el periférico está listo, la CPU solicita la transferencia de datos por medio de un comando al módulo E/S.
+    <br>
+        4. El módulo E/S obtiene el dato del periférico.
+    <br>
+         5.El dato se transfiere desde el módulo a la CPU.
+    </p><img src="11.png" height="200" width="400" align="center">
+    <h4>1.2.3.2 Entrada/Salida programada </h4>
+    <p style="text-align: justify;">
+        Con la E/S programable, el módulo realiza la instrucción que le encarga la CPU y coloca los bits correspondientes en el registro de estado.
+        <br><br>
+        Es responsabilidad de la CPU comprobar periódicamente el estado hasta que se complete la instrucción.
+        <br><br>
+        Supongamos, por ejemplo, el caso de lectura de datos de un periférico y almacenamiento de memoria:
+        <br><br>
+        Para ejecutar una instrucción E/S, la CPU utiliza una dirección, que especifica el módulo particular, y un comando E/S (en este caso, lectura).
+        <br><br>
+        Los datos se leen de uno en uno.
+        <br><br>
+        Para cada palabra, la CPU debe permanecer en un ciclo de comprobación determina que el dato está disponible en el registro de datos del módulo.
+    </p><h4>1.2.3.3 Entrada/Salida mediante interrupciones</h4>
+    <p style="text-align: justify;">
+        Esta técnica pretende evitar que el procesador pare o haga trabajo improductivo, mientras que espera a que el periférico esté preparado para hacer una nueva operación.
+        <br>
+    El hardware de la computadora, necesita tener un conjunto de líneas de control del bus del sistema y de petición de interrupción.
+    </p><h4>Funcionamiento</h4>
+    <p style="text-align: justify;">
+        1. El procesador ejecuta instrucciones de un programa. Al finalizar cada instrucción comprueba si se ha producido una interrupción.
+        <br><br>
+        2. En caso afirmativo se salva el estado actual del programa (contador del programa y registros) y se salta a a ejecutar la rutina de servicio correspondiente.
+        <br><br>
+        3. La rutina de servicio efectúa las operaciones apropiadas en la E/S para realizar la transferencia de datos solicitada.
+        <br><br>
+        4.Al finalizar la rutina de servicio se recupera el estado de la CPU y se continúa ejecutando el programa que se estaba ejecutando antes de la interrupción.
+    </p><h4>Interrupciones</h4>
+    <p style="text-align: justify;">
+        ENMASCARABLES (se pueden dejar de atender por software).
+        <br><br>
+        NO ENMASCARABLES (siempre atendidas).
+        <br><br>
+        Dos formas de conocer la dirección/posición (vector) donde se encuentra la rutina de servicio de la interrupción.
+        <br><br>
+        Vector de interrupciones siempre FIJO ó el periférico suministra el vector de interrupción.
+    </p><img src="12.jpeg" height="200" width="400" align="center">
+    <h4>1.2.3.4 Acceso directo a memoria</h4>
+    <p style="text-align: justify;">
+        El DMA permite que el dispositivo de red mueva los datos del paquete directamente a la memoria del sistema, reduciendo la utilizacion del CPU. Sin embargo, la frecuencia y los intervalos aleatorios en los cuales los paquetes llegan no permiten que el sistema ingrese un estado de energía más bajo
+        <br><br>
+        El coalescentes DMA permite que el NIC recoja los paquetes antes de que inicie un evento DMA. Esto puede aumentar la latencia de la red, pero también aumenta las probabilidades de que el sistema consuma menos energía.
+        <br><br>
+        La DMA es utilizada en: controladores de disco, tarjetas graficas y tarjetas de sonido.
+<br><br>
+        Es esencial en todo ordenador moderno, ya que permite a dispositivos de diferentes velocidades comunicarse sin someter a la CPU a una carga masiva de interrupciones.
+<br><br>
+        Mayor DMA significa mayor energia guardada pero pueden aumentar la latencia de red del sistema.
+<br><br>
+        Una transferencia DMA coniste principalmente en copiar un bloque de memoria de un dispositivo a otro.
+<br><br>
+        Un ejemplo es al mover un bloque de memoria desde una memoria externa a una interna mas rapida.
+<br><br>
+        Puede llevar a problemas de coherencia de caché. Imagine una CPU equipada con una memoria caché y una memoria externa que se pueda acceder directamente por los dispositivos que utilizan DMA.
+<br><br>
+        Cuando la CPU accede a X lugar en la memoria, el valor actual se almacena en la caché. Si se realizan operaciones posteriores en X, se actualizará la copia en caché de X, pero no la versión de memoria externa de X. Si la caché no se vacía en la memoria antes de que otro dispositivo intente acceder a X, el dispositivo recibirá un valor caducado de X.
+<br><br>
+        Del mismo modo, si la copia en caché de X no es invalidada cuando un dispositivo escribe un nuevo valor en la memoria, entonces la CPU funcionará con un valor caducado de X.
+    </p><img src="13.png" height="200" width="400" align="center">
+    <h4>1.2.3.5 Canales y procesadores de entrada/salida </h4>
+    <p style="text-align: justify;">
+        EL canal de E/S es una extensión del bus del 8088.
+        <br><br>
+        Los canales de E/S proporcionan una línea Ready para permitir operaciones con dispositivos de memoria o de E/S lentos.
+<br><br>
+        Los ciclos de reloj se presentan aproximadamente cada 15 m sec y requieren de cinco ciclos de reloj.
+<br><br>
+        Los dispositivos de E/S están direccionados utilizando un mapeo de E/S con el espacio de direccionamiento. El canal proporciona a las tarjetas de E/S 512 direcciones de dispositivos.
+    </p>Se refiere a un conjunto de líneas de comunicación que permiten la transferencia de datos entre los diferentes componentes de la computadora.
+
+    Permiten que el procesador se comunique con la memoria, los dispositivos de almacenamiento, las tarjetas de expansión y otros componentes.
+    <p style="text-align: justify;">
+        Se refiere a un conjunto de líneas de comunicación que permiten la transferencia de datos entre los diferentes componentes de la computadora.
+        <br><br>
+        Permiten que el procesador se comunique con la memoria, los dispositivos de almacenamiento, las tarjetas de expansión y otros componentes.
+    </p><h4>1.2.4.1 Tipos de buses</h4>
+    <p style="text-align: justify;">
+        Es una parte fundamental de la comunicación entre los diferentes o elementos de un ordenador.
+    <br><br>
+        Es un medio físico por el cuál pueden viajar las señales con la información que se tiene que transmitir.
+    <br><br>
+        Hay diferentes tipos de buses: método de envío de la información, según las direcciones y según la información que transporten.
+    </p><h4>Buses segun el envio de informacion</h4>
+    <p style="text-align: justify;">
+        Paralelo: Los datos son enviados por bytes al mismo tiempo, con la ayuda de varias líneas que tienen funciones fijas. Por ejemplo, si se desea crear un bus paralelo para transmitir datos de 8 bits, se necesitan 8 líneas individuales.
+        <br><br>
+        En serie: La información se transmite de bit a bit, lo que implica que solo se necesita una línea de datos. Es usado en buses para discos duros, tarjetas de expansión, USB.
+    </p><img src="14.jpg" height="200" width="400" align="center">
+    <h4>Buses segun las direcciones</h4>
+    <p style="text-align: justify;">
+        Unidireccional: Solo permite la transmisión en una dirección o sentido. Se usa, por ejemplo, en un sistema de CPU simple, donde solo se envían direcciones a la memoria.
+        <br><br>
+        Bidireccional: Permite la transmisión de datos en una dirección u otra, pero no ambas al mismo tiempo.
+        <br><br>
+        Duplex completo: Se transmiten datos en ambos sentido o direcciones de manera simultánea. Para estas transmisiones, se requiere el uso de múltiples vías separadas.
+    </p><img src="15.png" height="200" width="400" align="center">
+    <h4>Buses segun informacion que transportan</h4>
+    <p style="text-align: justify;">
+        Dirección: Se encargan de indicar la posición de memoria o el dispositivo con el que se desea establecer comunicación.
+        <br><br>
+        Control: Transportan señales de estado de las operaciones efectuadas por la CPU a las demás unidades.
+        <br><br>
+        Datos: Mueve los datos entre los dispositivos del hardware de entrada, de salida y de almacenamiento.
+    </p><h4>1.2.4.2 Estructura de buses</h4>
+    <p style="text-align: justify;">
+        Un bus es un medio compartido de comunicación constituido por un conjunto de líneas (conductores) que conecta las diferentes unidades de un computador. La principal función de un bus será, pues, servir de soporte para la realización de transferencias de información entre dichas unidades.
+    <br><br>
+        La unidad que inicia y controla la transferencia se conoce como master del bus para dicha transferencia, y la unidad sobre la que se realiza la transferencia se conoce como slave. Los papeles de master y slave son dinámicos, de manera que una misma unidad puede realizar ambas funciones en transferencias diferentes.
+    <br><br>
+        Por ejemplo, una unidad de DMA hace de slave en la inicialización que realiza el master, la CPU, para una operación de E/S. Sin embargo, cuando comienza la operación, la unidad de DMA juega el papel de master frente a la memoria, que en esta ocasión hace de slave.
+    <br><br>
+        Para garantizar el acceso ordenado al bus, existe un sistema de arbitraje, centralizado o distribuido, que establece las prioridades cuando dos o más unidades pretenden acceder al mismo tiempo al bus, es decir, garantiza que en cada momento sólo exista un master.
+    <br><br>
+        Los computadores modernos tienen por lo menos 4 buses diferentes (bus interno, bus del procesador, bus del caché, bus local de E/S, bus estándar de E/S). Se les considera una jerarquía, porque cada bus se conecta al nivel superior a él dentro del computador, integrando así todas las partes del computador.
+    </p><h4>Bus interno, procesador y cache</h4>
+    <p style="text-align: justify;">
+        Interno: Este mueve datos entre los componentes internos del microprocesador.
+        <br><br>
+        Procesador: El bus del procesador es el más rápido tratándose de que este es el dispositivo más rápido del computador.
+        <br><br>
+        Cache: Un bus de caché es un bus de alta velocidad dedicado que utiliza un procesador de computadora para comunicarse con su memoria caché.
+    </p><h4>Bus local y estandar</h4>
+    <p style="text-align: justify;">
+        Local: Alta velocidad conecta el procesador a la caché sin interrumpir el flujo de datos. Permite acceso rápido a los datos en caché y la conexión de dispositivos de entrada y salida.
+        <br><br>
+        Estandar: Conexión más lenta a través de otro adaptador debido a las líneas eléctricas que unen las partes del microprocesador, formando el bus interno por donde circulan datos, señales de control y direcciones de memoria, que en un microprocesador de 32 bits consta de 32 líneas.
+    </p><h4>1.2.5 Interrupciones</h4>
+    <p style="text-align: justify;">
+        Forma de comunicacion de software y hardware con la CPU. Al escribir en su teclado, el hardware y software respectivos envian interrupciones a la CPU para activar el procesamiento de su entrada. Tambien pueden decirle a la PCU que ocurrio un error, y esto puede causar un aumento en el uso de la CPU, en un sistema saludable, estas se extenderan entre el 0.1% y el 2% del uso de la CPU
+        <br><br>
+        Consiste en un mecanismo que le permite al hardware la invocacion de una rutina fuera del control del programa que esta siendo ejecutado. Es una supension temporal de la ejecucion de un proceso, para pasar a ejecutar una subrutina de servicio de interrupción, la cual, por lo general, no forma parte del programa, sino que pertenece al sistema operativo o al BIOS. Una vez finalizada dicha subrutina, se reanuda la ejecución del programa.
+        <br><br>
+        La primera técnica que se empleó para esto fue el polling, que consistía en que el propio procesador se encargara de sondear los dispositivos periféricos cada cierto tiempo para averiguar si tenía pendiente alguna comunicación para él.
+    </p><img src="16.png" height="150" width="300" align="center">
+    <br><br><br>
+    <a href="index.html" target="_self">
+    <img src="regresar.png" height="50" width="50" class="menu-button">
+</a>
+</center>
+    <br>
+    <div class="social-icons">
+    <font face="arial">
+    <h3><i>Rodrigo Sosa Covarrubias</i></h3>
+    <h3><i>L21051515@saltillo.tecnm.mx</i></h3>
+    </font>
+    <a href="https://saltillo.tecnm.mx" target="_blank"><img src="logo.png" height="55" width="55"></a>
+    <a href="https://www.facebook.com" target="_blank"><img src="pp.png" height="55" width="55"></a>
+    <a href="https://whatsapp.com" target="_blank"><img src="p.png" height="55" width="55"></a>
+    <a href="https://www.instagram.com" target="_blank"><img src="p2.png" height="45" width="45"></a>
+    </div>
+</html>
